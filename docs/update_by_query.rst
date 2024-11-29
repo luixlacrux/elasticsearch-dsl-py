@@ -36,7 +36,7 @@ Once your client is defined, you can instantiate a copy of the ``Update By Query
 
 .. code:: python
 
-    from elasticsearch_dsl import UpdateByQuery
+    from elasticsearch7_dsl import UpdateByQuery
 
     ubq = UpdateByQuery().using(client)
     # or

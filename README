@@ -75,7 +75,7 @@ Let's have a typical search request written directly as a ``dict``:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
+    from elasticsearch7 import Elasticsearch
     client = Elasticsearch()
 
     response = client.search(
@@ -115,8 +115,8 @@ Let's rewrite the example using the Python DSL:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
-    from elasticsearch_dsl import Search
+    from elasticsearch7 import Elasticsearch
+    from elasticsearch7_dsl import Search
 
     client = Elasticsearch()
 
@@ -157,7 +157,7 @@ Let's have a simple Python class representing an article in a blogging system:
 .. code:: python
 
     from datetime import datetime
-    from elasticsearch_dsl import Document, Date, Integer, Keyword, Text, connections
+    from elasticsearch7_dsl import Document, Date, Integer, Keyword, Text, connections
 
     # Define a default Elasticsearch client
     connections.create_connection(hosts=['localhost'])

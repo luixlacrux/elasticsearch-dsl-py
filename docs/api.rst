@@ -34,7 +34,7 @@ Faceted Search
 .. autoclass:: FacetedSearch
    :members:
 
-Update By Query 
+Update By Query
 ----------------
 .. autoclass:: UpdateByQuery
   :members:
@@ -50,7 +50,7 @@ pattern to the query dsl:
 
 .. code:: python
 
-    from elasticsearch_dsl import Keyword, Mapping, Nested, Text
+    from elasticsearch7_dsl import Keyword, Mapping, Nested, Text
 
     # name your type
     m = Mapping()
@@ -108,5 +108,3 @@ Common field options:
 
 ``required``
   Indicates if a field requires a value for the document to be valid.
-
-

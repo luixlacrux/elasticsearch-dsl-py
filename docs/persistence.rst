@@ -23,7 +23,7 @@ settings in elasticsearch (see :ref:`life-cycle` for details).
 .. code:: python
 
     from datetime import datetime
-    from elasticsearch_dsl import Document, Date, Nested, Boolean, \
+    from elasticsearch7_dsl import Document, Date, Nested, Boolean, \
         analyzer, InnerDoc, Completion, Keyword, Text
 
     html_strip = analyzer('html_strip',
@@ -78,7 +78,7 @@ in any of the `range fields
 
 .. code:: python
 
-    from elasticsearch_dsl import Document, DateRange, Keyword, Range
+    from elasticsearch7_dsl import Document, DateRange, Keyword, Range
 
     class RoomBooking(Document):
         room = Keyword()
@@ -283,7 +283,7 @@ handle its creation, from our example earlier:
 
 .. code:: python
 
-    from elasticsearch_dsl import analyzer, tokenizer
+    from elasticsearch7_dsl import analyzer, tokenizer
 
     my_analyzer = analyzer('my_analyzer',
         tokenizer=tokenizer('trigram', 'nGram', min_gram=3, max_gram=3),
@@ -461,7 +461,7 @@ in a migration:
 
 .. code:: python
 
-    from elasticsearch_dsl import Index, Document, Text, analyzer
+    from elasticsearch7_dsl import Index, Document, Text, analyzer
 
     blogs = Index('blogs')
 
@@ -539,7 +539,7 @@ Potential workflow for a set of time based indices governed by a single template
 
     from datetime import datetime
 
-    from elasticsearch_dsl import Document, Date, Text
+    from elasticsearch7_dsl import Document, Date, Text
 
 
     class Log(Document):

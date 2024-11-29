@@ -35,8 +35,8 @@ instantiating the ``Search`` object:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
-    from elasticsearch_dsl import Search
+    from elasticsearch7 import Elasticsearch
+    from elasticsearch7_dsl import Search
 
     client = Elasticsearch()
 
@@ -113,7 +113,7 @@ between the raw query and its equivalent in the DSL:
 
 .. code:: python
 
-    from elasticsearch_dsl.query import MultiMatch, Match
+    from elasticsearch7_dsl.query import MultiMatch, Match
 
     # {"multi_match": {"query": "python django", "fields": ["title", "body"]}}
     MultiMatch(query='python django', fields=['title', 'body'])
@@ -134,7 +134,7 @@ parameters or the raw ``dict``:
 
 .. code:: python
 
-    from elasticsearch_dsl import Q
+    from elasticsearch7_dsl import Q
 
     Q("multi_match", query='python django', fields=['title', 'body'])
     Q({"multi_match": {"query": "python django", "fields": ["title", "body"]}})
@@ -261,7 +261,7 @@ To define an aggregation, you can use the ``A`` shortcut:
 
 .. code:: python
 
-    from elasticsearch_dsl import A
+    from elasticsearch7_dsl import A
 
     A('terms', field='tags')
     # {"terms": {"field": "tags"}}
@@ -576,7 +576,7 @@ If you need to execute multiple searches at the same time you can use the
 
 .. code:: python
 
-    from elasticsearch_dsl import MultiSearch, Search
+    from elasticsearch7_dsl import MultiSearch, Search
 
     ms = MultiSearch(index='blogs')
 

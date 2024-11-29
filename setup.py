@@ -48,10 +48,10 @@ develop_requires = [
 ]
 
 setup(
-    name="elasticsearch-dsl",
+    name="elasticsearch7-dsl",
     description="Python client for Elasticsearch",
     license="Apache-2.0",
-    url="https://github.com/elasticsearch/elasticsearch-dsl-py",
+    url="https://github.com/luixlacrux/elasticsearch-dsl-py",
     long_description=long_description,
     long_description_content_type="text/x-rst",
     version=__versionstr__,

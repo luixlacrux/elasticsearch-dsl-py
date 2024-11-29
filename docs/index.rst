@@ -67,7 +67,7 @@ Let's have a typical search request written directly as a ``dict``:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
+    from elasticsearch7 import Elasticsearch
     client = Elasticsearch()
 
     response = client.search(
@@ -111,8 +111,8 @@ Let's rewrite the example using the Python DSL:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
-    from elasticsearch_dsl import Search
+    from elasticsearch7 import Elasticsearch
+    from elasticsearch7_dsl import Search
 
     client = Elasticsearch()
 
@@ -153,8 +153,8 @@ Let's have a simple Python class representing an article in a blogging system:
 .. code:: python
 
     from datetime import datetime
-    from elasticsearch_dsl import Document, Date, Integer, Keyword, Text
-    from elasticsearch_dsl.connections import connections
+    from elasticsearch7_dsl import Document, Date, Integer, Keyword, Text
+    from elasticsearch7_dsl.connections import connections
 
     # Define a default Elasticsearch client
     connections.create_connection(hosts=['localhost'])
@@ -227,7 +227,7 @@ search class to simplify searching and filtering.
 
 .. code:: python
 
-    from elasticsearch_dsl import FacetedSearch, TermsFacet, DateHistogramFacet
+    from elasticsearch7_dsl import FacetedSearch, TermsFacet, DateHistogramFacet
 
     class BlogSearch(FacetedSearch):
         doc_types = [Article, ]
@@ -265,7 +265,7 @@ Writing this as a ``dict``, we would have the following code:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
+    from elasticsearch7 import Elasticsearch
     client = Elasticsearch()
 
     response = client.update_by_query(
@@ -284,12 +284,12 @@ Writing this as a ``dict``, we would have the following code:
         },
       )
 
-Using the DSL, we can now express this query as such: 
+Using the DSL, we can now express this query as such:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
-    from elasticsearch_dsl import Search, UpdateByQuery
+    from elasticsearch7 import Elasticsearch
+    from elasticsearch7_dsl import Search, UpdateByQuery
 
     client = Elasticsearch()
     ubq = UpdateByQuery(using=client, index="my-index") \
