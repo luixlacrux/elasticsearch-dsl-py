@@ -31,7 +31,7 @@
 import datetime
 import os
 
-import elasticsearch_dsl
+import elasticsearch7_dsl
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
